@@ -6,9 +6,9 @@ def greet():
     return("Hello world")
 
 products = [
-    Product(1,"Phone","Apple Phone",1000,5),
-    Product(2,"Lap","Dell Lap",200,50),
-    Product(3,"Tab","KIA Phone",20.89,15)
+    Product(id = 1,name = "Phone",description = "Apple Phone",price = 1000,quantity= 5),
+    Product(id = 1,name = "Phone",description = "Apple Phone",price = 1000,quantity= 5),
+    Product(id = 1,name = "Phone",description = "Apple Phone",price = 1000,quantity= 5),  
 ]
 @app.get("/products")
 def getAllProducts():
