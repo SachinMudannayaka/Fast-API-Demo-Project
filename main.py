@@ -17,4 +17,7 @@ def getAllProducts():
 
 @app.get("/product/{id}")
 def get_product_by_id(id: int):
-    return products[id-1]
+    for product in products:
+        if product.id == id:
+            return product
+    return("Product Not Found")
