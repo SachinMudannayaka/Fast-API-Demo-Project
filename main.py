@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from models import Product
+from database import session
 app = FastAPI()
 @app.get("/")
 def greet():
@@ -13,7 +14,12 @@ products = [
 #GET
 @app.get("/products")
 def getAllProducts():
+    #DB Connection
+    db = session()
+    db.querry()
+
     return products
+
 #GET BY ID
 @app.get("/product/{id}")
 def get_product_by_id(id: int):
