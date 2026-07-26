@@ -3,8 +3,9 @@ from sqlalchemy import Column, Integer, String,Float
 Base = declarative_base()
 
 class Product(Base):
-    id = Column(Integer,primary_key=True, Index=True)
-    name:str
-    description:str
-    price:float
-    quantity:int
+    __tablename__ = "product"
+    id = Column(Integer,primary_key=True, index=True)
+    name = Column(String(20))
+    description = Column(String(100))
+    price = Column (Float)
+    quantity = Column(Integer)
